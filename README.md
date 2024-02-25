@@ -1,1 +1,1 @@
-Game respository for WowDaBug Games Remastered.
+game respository for wowdabug games remastered
