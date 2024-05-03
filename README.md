@@ -1,4 +1,4 @@
-# game respository for wowdabug games remastered
+# Game Respository for Wowdabug Games
 ## TODO:
 - add run 3 and minecraft indev to main repo
 
