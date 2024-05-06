@@ -17,3 +17,5 @@
 - add analytics to super mario world
 
 - add analytics to super mario all stars
+
+- fix title on all games
