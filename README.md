@@ -5,5 +5,3 @@
 - find idle breakout source code
 
 - find babel tower source code
-
-- fix title on all games
