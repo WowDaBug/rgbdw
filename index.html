@@ -1,76 +1,132 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>WDBG</title>
-<link rel="icon" type="image/png" href="resources/favicon-32x32.png">
-<style>
-body {
-  background-color: black;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDBG - Fullscreen Games and More</title>
+    <link rel="icon" type="image/png" href="resources/favicon-32x32.png">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
 
-h1 {
-  font-family: verdana;
-  color: forestgreen;
-  text-align: center;
-}
+        h1 {
+            font-family: 'Verdana', sans-serif;
+            color: forestgreen;
+            margin-bottom: 20px;
+        }
+        
+           h2 {
+            font-family: 'Verdana', sans-serif;
+            color: forestgreen;
+            margin-bottom: 20px;
+        }
 
-p {
-  font-family: roboto;
-  font-size: 20px;
-}
-</style>
+        .section-title {
+            margin-top: 40px;
+        }
+
+        .game-list,
+        .other-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .game-list li,
+        .other-list li {
+            margin: 10px 0;
+        }
+
+        .game-list a,
+        .other-list a {
+            color: #00f;
+            text-decoration: none;
+        }
+
+        .game-list a:hover,
+        .other-list a:hover {
+            text-decoration: underline;
+        }
+
+        .note {
+            font-size: 14px;
+            color: #ccc;
+        }
+    </style>
 </head>
 <body>
-<br>
-<h1>Welcome! This is where I keep all of my games!</h1>
-<br>
-<p><a href="8402">2048</a></p>
-<p><a href="tsap_eht_ot_knil">A Link to the Past</a></p>
-<p><a href="sdioretsa">Asteroids</a></p>
-<p><a href="https://www.coolmathgames.com/sites/default/files/public_games/47462/">Babel Tower<sup>1</sup></a></p>
-<p><a href="efiltib">Bitlife</a></p>
-<p><a href="hsalf/bloxorz.html">Bloxorz</a></p>
-<p><a href="https://html5-games.io/game/champion_island/">Champion Island<sup>1</sup></a></p>
-<p><a href="nur_htaed">Death Run</a></p>
-<p><a href="onid">Dino</a></p>
-<p><a href="pmuj_eldood">Doodle Jump</a></p>
-<p><a href="rotalumis_thgilf">Flight Simulator</a></p>
-<p><a href="rekcilcaxeh">HexaClicker</a></p>
-<p><a href="https://www.coolmathgames.com/sites/default/files/public_games/49029/">Idle Breakout<sup>1</sup></a></p>
-<p><a href="tuokaerb_eldi">Idle Breakout<sup>2</sup></a></p>
-<p><a href="ecid_eldi">Idle Dice</a></p>
-<p><a href="https://html5-games.io/game/magic_cat/">Magic Cat Academy<sup>1</sup></a></p>
-<p><a href="46_oiram">Mario 64</a></p>
-<p><a href="46km">Mario Kart 64</a></p>
-<p><a href="repeewsenim">Minesweeper</a></p>
-<p><a href="emit_fo_aniraco">Ocarina of Time</a></p>
-<p><a href="ovo">OvO</a></p>
-<p><a href="llabtoof_nep">Pen Football</a></p>
-<p><a href="tuo_hcnup">Punch Out</a></p>
-<p><a href="lwob_orter">Retro Bowl</a></p>
-<p><a href="https://wowdabug.github.io/3_nur/tn6pS9dCf37xAhkJv/">Run 3<sup>1</sup></a></p>
-<p><a href="3_nur">Run 3<sup>2</sup></a></p>
-<p><a href="epols">Slope</a></p>
-<p><a href="sr">Slow Roads</a></p>
-<p><a href="1v_redir_wons">Snow Rider V1</a></p>
-<p><a href="srats_lla">Super Mario All Stars</a></p>
-<p><a href="sorb_oiram_repus">Super Mario Bros</a></p>
-<p><a href="dlrow_oiram">Super Mario World</a></p>
-<p><a href="frus">Surf</a></p>
-<p><a href="sirtet">Tetris</a></p>
-<p><a href="2_htrae_lanif_eht">The Final Earth 2</a></p>
-<p><a href="hsalf/twhg.html">TWHG</a></p>
-<p><a href="eldrow">Wordle</a></p>
-<p><a href="eldlrow">Worldle</a></p>
-<p><a href="rekcilc_eikooc">Cookie Clicker</a></p>
-<p><a href="cissalc_tfarcenim">Minecraft Classic</a></p>
-<p><a href="vedni_tfarcenim/js">Minecraft Indev</a></p>
-<p><a href="ahpla_tfarcenim/web">Minecraft Alpha</a></p>
-<p><a href="tahc_duolc">Cloud Chat</a></p>
-<p><a href="so_gubadwow">WowDaBug OS</a></p>
-<p><a href="1el">LE1</a></p>
-<p><a href="2el">LE2</a></p>
-<p><sup>1</sup>This link does not go to this website. It's content could change at any time.</p>
-<p><sup>2</sup>This game is currently broken. It may be fixed in the future.</p>
+    <header>
+        <h1>Fullscreen Games</h1>
+    </header>
+
+    <main>
+        <section>
+            <ul class="game-list">
+                <li><a href="8402">2048</a></li>
+                <li><a href="tsap_eht_ot_knil">A Link to the Past</a></li>
+                <li><a href="sdioretsa">Asteroids</a></li>
+                <li><a href="https://www.coolmathgames.com/sites/default/files/public_games/47462/">Babel Tower <sup>1</sup></a></li>
+                <li><a href="efiltib">Bitlife</a></li>
+                <li><a href="hsalf/bloxorz.html">Bloxorz</a></li>
+                <li><a href="https://html5-games.io/game/champion_island/">Champion Island <sup>1</sup></a></li>
+                <li><a href="nur_htaed">Death Run</a></li>
+                <li><a href="onid">Dino</a></li>
+                <li><a href="pmuj_eldood">Doodle Jump</a></li>
+                <li><a href="rotalumis_thgilf">Flight Simulator</a></li>
+                <li><a href="rekcilcaxeh">HexaClicker</a></li>
+                <li><a href="https://www.coolmathgames.com/sites/default/files/public_games/49029/">Idle Breakout <sup>1</sup></a></li>
+                <li><a href="tuokaerb_eldi">Idle Breakout <sup>2</sup></a></li>
+                <li><a href="ecid_eldi">Idle Dice</a></li>
+                <li><a href="https://html5-games.io/game/magic_cat/">Magic Cat Academy <sup>1</sup></a></li>
+                <li><a href="46_oiram">Mario 64</a></li>
+                <li><a href="46km">Mario Kart 64</a></li>
+                <li><a href="repeewsenim">Minesweeper</a></li>
+                <li><a href="emit_fo_aniraco">Ocarina of Time</a></li>
+                <li><a href="ovo">OvO</a></li>
+                <li><a href="llabtoof_nep">Pen Football</a></li>
+                <li><a href="tuo_hcnup">Punch Out</a></li>
+                <li><a href="lwob_orter">Retro Bowl</a></li>
+                <li><a href="https://wowdabug.github.io/3_nur/tn6pS9dCf37xAhkJv/">Run 3 <sup>1</sup></a></li>
+                <li><a href="3_nur">Run 3 <sup>2</sup></a></li>
+                <li><a href="epols">Slope</a></li>
+                <li><a href="sr">Slow Roads</a></li>
+                <li><a href="1v_redir_wons">Snow Rider V1</a></li>
+                <li><a href="srats_lla">Super Mario All Stars</a></li>
+                <li><a href="sorb_oiram_repus">Super Mario Bros</a></li>
+                <li><a href="dlrow_oiram">Super Mario World</a></li>
+                <li><a href="frus">Surf</a></li>
+                <li><a href="sirtet">Tetris</a></li>
+                <li><a href="2_htrae_lanif_eht">The Final Earth 2</a></li>
+                <li><a href="hsalf/twhg.html">TWHG</a></li>
+                <li><a href="eldrow">Wordle</a></li>
+                <li><a href="eldlrow">Worldle</a></li>
+                <li><a href="rekcilc_eikooc">Cookie Clicker</a></li>
+                <li><a href="cissalc_tfarcenim">Minecraft Classic</a></li>
+                <li><a href="vedni_tfarcenim/js">Minecraft Indev</a></li>
+                <li><a href="ahpla_tfarcenim/web">Minecraft Alpha</a></li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2 class="section-title">Other Stuff</h2>
+            <ul class="other-list">
+                <li><a href="tahc_duolc">Cloud Chat</a></li>
+                <li><a href="so_gubadwow">WowDaBug OS</a></li>
+                <li><a href="1el">LE1</a></li>
+                <li><a href="2el">LE2</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p class="note"><sup>1</sup>This link does not go to this website. Its content could change at any time.</p>
+        <p class="note"><sup>2</sup>This game is currently broken. It may be fixed in the future.</p>
+    </footer>
 </body>
 </html>
+
