@@ -1,1 +1,1 @@
-# Game Respository for Wowdabug Games
+# Respository for Wowdabug Games
