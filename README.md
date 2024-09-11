@@ -1,1 +1,1 @@
-# respository for wowdabug games
+# repository for wowdabug games
