@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 25px 0px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #ffcb7b;
+    border-radius: 1%;
+    border-color: #fa9305;
+    border-width: 10px;
+    border-style: ridge;
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        width: 100%;
+        max-width: 1140px;
+        flex-direction: row;
+        padding: 50px 0px;
+    }
+}

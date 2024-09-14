@@ -1,0 +1,14 @@
+.pufferdle {
+    display: flex;
+    min-height: 90vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hitImage {
+    image-rendering: pixelated;
+    width:20rem;
+    height:auto;
+}

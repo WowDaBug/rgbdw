@@ -1,0 +1,129 @@
+@import url('../Fonts/fonts.css');
+
+.Grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: 0;
+}
+
+.RowNames {
+    display: flex;
+}
+
+.RowNames > h2 {
+    width: 60px;
+    height: 20px;
+    background-color: #ffc979;
+    border-radius: 5%;
+    border-style: solid;
+    border-width: 4px;
+    border-right-color: #d68f54;
+    border-top-color: #d68f54;
+    border-left-color: #ffe4a1;
+    border-bottom-color: #ffe4a1;
+    margin-bottom: 5px;
+    text-align: center;
+    font-family: "SVBold";
+    font-size: 1em;
+}
+
+.Row, .NewRow {
+    display: flex;
+}
+
+.Row > div, .NewRow > div {
+    width: 60px;
+    height: 60px;
+    background-color: #ffc979;
+    border-radius: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-width: 4px;
+    border-right-color: #d68f54;
+    border-top-color: #d68f54;
+    border-left-color: #ffe4a1;
+    border-bottom-color: #ffe4a1;
+}
+
+.Row > div > div:not(.skipAnim), .Row > div > img:not(.skipAnim) {
+    transform: scale(0);
+}
+
+.Row > div > div, .Row > div > img {
+    width: 50px;
+    height: 50px;
+    image-rendering: pixelated;
+    mask-repeat: no-repeat;
+    mask-size: 100%;
+    transform: scale(1);
+}
+
+
+.Row > div > *:not(.skipAnim) {
+    animation: popin 0.5s ease forwards;
+}
+.Row > div > div.green {
+    background-color: #598f0a;
+}
+.Row > div > div.yellow {
+    background-color: #de8800;
+}
+.Row > div > div.gray {
+    background-color: #3a3a3c;
+}
+.Row > div > div.noGuess {
+    background-color: #c0c0c0;
+}
+
+.Row > div:nth-child(2) > div:not(.skipAnim) {
+    animation-delay: 0.4s;
+}
+.Row > div:nth-child(3) > div:not(.skipAnim) {
+    animation-delay: 0.8s;
+}
+.Row > div:nth-child(4) > div:not(.skipAnim) {
+    animation-delay: 1.2s;
+}
+.Row > div:nth-child(5) > div:not(.skipAnim), .Row > div:nth-child(5) > img:not(.skipAnim) {
+    animation-delay: 1.6s;
+}
+
+
+@keyframes popin {
+    0% {
+        transform: scale(0, 0);
+        /* transform: rotateX(0); */
+    }
+    25% {
+        transform: scale(1.4, 1.4);
+        /* transform: rotateX(90deg); */
+    }
+    100% {
+        transform: scale(1, 1);
+        /* transform: rotateX(0); */
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .Grid {
+        order: 1;
+    }
+
+    .RowNames > h2 {
+        width: 80px;
+        font-size: 1.2em;
+    }
+
+    .Row > div, .NewRow > div {
+        width: 80px;
+        height: 80px;
+    }
+
+    .Row > div > div, .Row > div > img {
+        height: 60px;
+        width: 60px;
+    }
+}
