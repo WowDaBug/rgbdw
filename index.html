@@ -3,130 +3,278 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDBG</title>
-    <link rel="icon" type="image/png" href="resources/favicon-32x32.png">
+    <title>Wowdabug Games</title>
     <style>
         body {
-            background-color: #000;
-            color: #fff;
-            font-family: 'Roboto', sans-serif;
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e; /* Dark grey background */
             margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #fff; /* White text */
+        }
+        .navbar {
+            background-color: #111; /* Black navbar */
+            padding: 10px 0;
+        }
+        .navbar a {
+            color: #ddd; /* Light grey text */
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+            font-size: 16px;
+        }
+        .navbar a:hover {
+            background-color: #333; /* Darker grey hover effect */
+            border-radius: 5px;
+        }
+        h1 {
+            margin: 20px 0;
+            color: #fff;
+            font-size: 28px;
+        }
+        .games-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            margin: auto;
             padding: 20px;
+        }
+        .game-box {
+            background: #2a2a2a; /* Dark grey card */
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
             text-align: center;
         }
-
-        h1 {
-            font-family: 'Verdana', sans-serif;
-            color: forestgreen;
-            margin-bottom: 20px;
+        .game-box img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
         }
-        
-           h2 {
-            font-family: 'Verdana', sans-serif;
-            color: forestgreen;
-            margin-bottom: 20px;
-        }
-
-        .section-title {
-            margin-top: 40px;
-        }
-
-        .game-list,
-        .other-list {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .game-list li,
-        .other-list li {
-            margin: 10px 0;
-        }
-
-        .game-list a,
-        .other-list a {
-            color: #00f;
+        .game-box a {
+            display: block;
+            margin-top: 10px;
             text-decoration: none;
+            color: #ddd; /* Light grey text */
+            font-weight: bold;
         }
-
-        .game-list a:hover,
-        .other-list a:hover {
-            text-decoration: underline;
-        }
-
-        .note {
-            font-size: 14px;
-            color: #ccc;
+        .game-box a:hover {
+            color: #f39c12; /* Orange accent on hover */
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Fullscreen Games</h1>
-	<h1>Use ctrl + f to search for a game!</h1>
-    </header>
 
-    <main>
-        <section>
-            <ul class="game-list">
-                <li><a href="8402">2048</a></li>
-                <li><a href="tsap_eht_ot_knil">A Link to the Past</a></li>
-                <li><a href="sdioretsa">Asteroids</a></li>
-                <li><a href="https://www.coolmathgames.com/sites/default/files/public_games/47462/">Babel Tower<sup>1</sup></a></li>
-                <li><a href="modnarteksab">Basket Random</a></li>
-                <li><a href="efiltib">Bitlife</a></li>
-                <li><a href="hsalf/bloxorz.html">Bloxorz</a></li>
-                <li><a href="https://html5-games.io/game/champion_island/">Champion Island <sup>1</sup></a></li>
-                <li><a href="nur_htaed">Death Run</a></li>
-                <li><a href="onid">Dino</a></li>
-                <li><a href="pmuj_eldood">Doodle Jump</a></li>
-                <li><a href="rotalumis_thgilf">Flight Simulator</a></li>
-		<li><a href="https://olliechick.co.nz/globle/">Globle<sup>1</sup></a></li>
-		<li><a href="sleehw_yppah">Happy Wheels</a></li>
-                <li><a href="rekcilcaxeh">HexaClicker</a></li>
-                <li><a href="https://www.coolmathgames.com/sites/default/files/public_games/49029/">Idle Breakout<sup>1</sup></a></li>
-                <li><a href="tuokaerb_eldi">Idle Breakout<sup>2</sup></a></li>
-                <li><a href="ecid_eldi">Idle Dice</a></li>
-                <li><a href="https://html5-games.io/game/magic_cat/">Magic Cat Academy<sup>1</sup></a></li>
-                <li><a href="46_oiram">Mario 64</a></li>
-                <li><a href="46km">Mario Kart 64</a></li>
-                <li><a href="repeewsenim">Minesweeper</a></li>
-                <li><a href="emit_fo_aniraco">Ocarina of Time</a></li>
-                <li><a href="ovo">OvO</a></li>
-		<li><a href="oiram_repap">Paper Mario</a></li>
-                <li><a href="llabtoof_nep">Pen Football</a></li>
-		<li><a href="rekcilc_tenalp">Planet Clicker</a></li>
-		<li><a href="2_kcartylop">PolyTrack</a></li> 
-		<li><a href="dlareme_nomekop">Pokemon Emerald</a></li>
-                <li><a href="tuo_hcnup">Punch Out</a></li>
-                <li><a href="lwob_orter">Retro Bowl</a></li>
-                <li><a href="https://wowdabug.github.io/3_nur/tn6pS9dCf37xAhkJv/">Run 3<sup>1</sup></a></li>
-                <li><a href="3_nur">Run 3<sup>2</sup></a></li>
-                <li><a href="epols">Slope</a></li>
-                <li><a href="sr">Slow Roads</a></li>
-                <li><a href="1v_redir_wons">Snow Rider</a></li>
-				<li><a href="modnar_reccos">Soccer Random</a></li>
-                <li><a href="srats_lla">Super Mario All Stars</a></li>
-                <li><a href="sorb_oiram_repus">Super Mario Bros</a></li>
-                <li><a href="dlrow_oiram">Super Mario World</a></li>
-                <li><a href="frus">Surf</a></li>
-		<li><a href="https://fxclient.github.io/FXclient/">Territorial.io<sup>1</sup></a></li>
-                <li><a href="sirtet">Tetris</a></li>
-                <li><a href="2_htrae_lanif_eht">The Final Earth 2</a></li>
-                <li><a href="hsalf/twhg.html">TWHG</a></li>
-                <li><a href="eldrow">Wordle</a></li>
-                <li><a href="eldlrow">Worldle</a></li>
-                <li><a href="rekcilc_eikooc">Cookie Clicker</a></li>
-                <li><a href="cissalc_tfarcenim">Minecraft Classic</a></li>
-                <li><a href="vedni_tfarcenim/js">Minecraft Indev</a></li>
-                <li><a href="ahpla_tfarcenim/web">Minecraft Alpha</a></li>
-            </ul>
-        </section>
-    </main>
+    <div class="navbar">
+        <a href="#">Home</a>
+    </div>
 
-    <footer>
-        <p class="note"><sup>1</sup>This link does not go to this website. Its content could change at any time.</p>
-        <p class="note"><sup>2</sup>This game is currently broken. It may be fixed in the future.</p>
-    </footer>
+    <h1>Wowdabug Games</h1>
+
+    <div class="games-container">
+        <div class="game-box">
+            <img src="game1.jpg" alt="2048">
+            <a href="8402">2048</a>
+        </div>
+        <div class="game-box">
+            <img src="game2.jpg" alt="A Link to the Past">
+            <a href="tsap_eht_ot_knil">A Link to the Past</a>
+        </div>
+        <div class="game-box">
+            <img src="game3.jpg" alt="Asteroids">
+            <a href="sdioretsa">Asteroids</a>
+        </div>
+        <div class="game-box">
+            <img src="game4.jpg" alt="Babel Tower">
+            <a href="https://www.coolmathgames.com/sites/default/files/public_games/47462/">Babel Tower</a>
+        </div>
+        <div class="game-box">
+            <img src="game5.jpg" alt="Basket Random">
+            <a href="modnarteksab">Basket Random</a>
+        </div>
+        <div class="game-box">
+            <img src="game6.jpg" alt="Bitlife">
+            <a href="efiltib">Bitlife</a>
+        </div>
+        <div class="game-box">
+            <img src="game7.jpg" alt="Bloxorz">
+            <a href="hsalf/bloxorz.html">Bloxorz</a>
+        </div>
+        <div class="game-box">
+            <img src="game8.jpg" alt="Champion Island">
+            <a href="https://html5-games.io/game/champion_island/">Champion Island</a>
+        </div>
+        <div class="game-box">
+            <img src="game9.jpg" alt="Death Run">
+            <a href="nur_htaed">Death Run</a>
+        </div>
+        <div class="game-box">
+            <img src="game10.jpg" alt="Dino">
+            <a href="onid">Dino</a>
+        </div>
+        <div class="game-box">
+            <img src="game11.jpg" alt="Doodle Jump">
+            <a href="pmuj_eldood">Doodle Jump</a>
+        </div>
+        <div class="game-box">
+            <img src="game12.jpg" alt="Flight Simulator">
+            <a href="rotalumis_thgilf">Flight Simulator</a>
+        </div>
+        <div class="game-box">
+            <img src="game13.jpg" alt="Globle">
+            <a href="https://olliechick.co.nz/globle/">Globle</a>
+        </div>
+        <div class="game-box">
+            <img src="game14.jpg" alt="Happy Wheels">
+            <a href="sleehw_yppah">Happy Wheels</a>
+        </div>
+        <div class="game-box">
+            <img src="game15.jpg" alt="HexaClicker">
+            <a href="rekcilcaxeh">HexaClicker</a>
+        </div>
+        <div class="game-box">
+            <img src="game16.jpg" alt="Idle Breakout">
+            <a href="https://www.coolmathgames.com/sites/default/files/public_games/49029/">Idle Breakout</a>
+        </div>
+        <div class="game-box">
+            <img src="game17.jpg" alt="Idle Breakout">
+            <a href="tuokaerb_eldi">Idle Breakout</a>
+        </div>
+        <div class="game-box">
+            <img src="game18.jpg" alt="Idle Dice">
+            <a href="ecid_eldi">Idle Dice</a>
+        </div>
+        <div class="game-box">
+            <img src="game19.jpg" alt="Magic Cat Academy">
+            <a href="https://html5-games.io/game/magic_cat/">Magic Cat Academy</a>
+        </div>
+        <div class="game-box">
+            <img src="game20.jpg" alt="Mario 64">
+            <a href="46_oiram">Mario 64</a>
+        </div>
+        <div class="game-box">
+            <img src="game21.jpg" alt="Mario Kart 64">
+            <a href="46km">Mario Kart 64</a>
+        </div>
+        <div class="game-box">
+            <img src="game22.jpg" alt="Minesweeper">
+            <a href="repeewsenim">Minesweeper</a>
+        </div>
+        <div class="game-box">
+            <img src="game23.jpg" alt="Ocarina of Time">
+            <a href="emit_fo_aniraco">Ocarina of Time</a>
+        </div>
+        <div class="game-box">
+            <img src="game24.jpg" alt="OvO">
+            <a href="ovo">OvO</a>
+        </div>
+        <div class="game-box">
+            <img src="game25.jpg" alt="Paper Mario">
+            <a href="oiram_repap">Paper Mario</a>
+        </div>
+        <div class="game-box">
+            <img src="game26.jpg" alt="Pen Football">
+            <a href="llabtoof_nep">Pen Football</a>
+        </div>
+        <div class="game-box">
+            <img src="game27.jpg" alt="Planet Clicker">
+            <a href="rekcilc_tenalp">Planet Clicker</a>
+        </div>
+        <div class="game-box">
+            <img src="game28.jpg" alt="PolyTrack">
+            <a href="2_kcartylop">PolyTrack</a>
+        </div>
+        <div class="game-box">
+            <img src="game29.jpg" alt="Pokemon Emerald">
+            <a href="dlareme_nomekop">Pokemon Emerald</a>
+        </div>
+        <div class="game-box">
+            <img src="game30.jpg" alt="Punch Out">
+            <a href="tuo_hcnup">Punch Out</a>
+        </div>
+        <div class="game-box">
+            <img src="game31.jpg" alt="Retro Bowl">
+            <a href="lwob_orter">Retro Bowl</a>
+        </div>
+        <div class="game-box">
+            <img src="game32.jpg" alt="Run 3">
+            <a href="https://wowdabug.github.io/3_nur/tn6pS9dCf37xAhkJv/">Run 3</a>
+        </div>
+        <div class="game-box">
+            <img src="game34.jpg" alt="Slope">
+            <a href="epols">Slope</a>
+        </div>
+        <div class="game-box">
+            <img src="game35.jpg" alt="Slow Roads">
+            <a href="sr">Slow Roads</a>
+        </div>
+        <div class="game-box">
+            <img src="game36.jpg" alt="Snow Rider">
+            <a href="1v_redir_wons">Snow Rider</a>
+        </div>
+        <div class="game-box">
+            <img src="game37.jpg" alt="Soccer Random">
+            <a href="modnar_reccos">Soccer Random</a>
+        </div>
+        <div class="game-box">
+            <img src="game38.jpg" alt="Super Mario All Stars">
+            <a href="srats_lla">Super Mario All Stars</a>
+        </div>
+        <div class="game-box">
+            <img src="game39.jpg" alt="Super Mario Bros">
+            <a href="sorb_oiram_repus">Super Mario Bros</a>
+        </div>
+        <div class="game-box">
+            <img src="game40.jpg" alt="Super Mario World">
+            <a href="dlrow_oiram">Super Mario World</a>
+        </div>
+        <div class="game-box">
+            <img src="game41.jpg" alt="Surf">
+            <a href="frus">Surf</a>
+        </div>
+        <div class="game-box">
+            <img src="game42.jpg" alt="Territorial.io">
+            <a href="https://fxclient.github.io/FXclient/">Territorial.io</a>
+        </div>
+        <div class="game-box">
+            <img src="game43.jpg" alt="Tetris">
+            <a href="sirtet">Tetris</a>
+        </div>
+        <div class="game-box">
+            <img src="game44.jpg" alt="The Final Earth 2">
+            <a href="2_htrae_lanif_eht">The Final Earth 2</a>
+        </div>
+        <div class="game-box">
+            <img src="game45.jpg" alt="TWHG">
+            <a href="hsalf/twhg.html">TWHG</a>
+        </div>
+        <div class="game-box">
+            <img src="game46.jpg" alt="Wordle">
+            <a href="eldrow">Wordle</a>
+        </div>
+        <div class="game-box">
+            <img src="game47.jpg" alt="Worldle">
+            <a href="eldlrow">Worldle</a>
+        </div>
+        <div class="game-box">
+            <img src="game48.jpg" alt="Cookie Clicker">
+            <a href="rekcilc_eikooc">Cookie Clicker</a>
+        </div>
+        <div class="game-box">
+            <img src="game49.jpg" alt="Minecraft Classic">
+            <a href="cissalc_tfarcenim">Minecraft Classic</a>
+        </div>
+        <div class="game-box">
+            <img src="game50.jpg" alt="Minecraft Indev">
+            <a href="vedni_tfarcenim/js">Minecraft Indev</a>
+        </div>
+        <div class="game-box">
+            <img src="game51.jpg" alt="Minecraft Alpha">
+            <a href="ahpla_tfarcenim/web">Minecraft Alpha</a>
+        </div>
+    </div>
+
 </body>
 </html>
-
