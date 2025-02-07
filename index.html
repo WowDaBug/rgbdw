@@ -1,277 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon-32x32.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wowdabug Games</title>
+    <title>WDBG</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #1e1e1e; /* Dark grey background */
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            color: #fff; /* White text */
-        }
-        .navbar {
-            background-color: #111; /* Black navbar */
-            padding: 10px 0;
-        }
-        .navbar a {
-            color: #ddd; /* Light grey text */
-            text-decoration: none;
-            padding: 10px 15px;
-            display: inline-block;
-            font-size: 16px;
-        }
-        .navbar a:hover {
-            background-color: #333; /* Darker grey hover effect */
-            border-radius: 5px;
-        }
-        h1 {
-            margin: 20px 0;
-            color: #fff;
-            font-size: 28px;
-        }
-        .games-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 20px;
-            max-width: 1100px;
-            margin: auto;
-            padding: 20px;
-        }
-        .game-box {
-            background: #2a2a2a; /* Dark grey card */
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-            text-align: center;
-        }
-        .game-box img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-        .game-box a {
-            display: block;
-            margin-top: 10px;
-            text-decoration: none;
-            color: #ddd; /* Light grey text */
-            font-weight: bold;
-        }
-        .game-box a:hover {
-            color: #f39c12; /* Orange accent on hover */
-        }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #1e1e1e;
+        /* Dark grey background */
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        color: #fff;
+        /* White text */
+      }
+
+      .navbar {
+        background-color: #111;
+        /* Black navbar */
+        padding: 10px 0;
+      }
+
+      .navbar a {
+        color: #ddd;
+        /* Light grey text */
+        text-decoration: none;
+        padding: 10px 15px;
+        display: inline-block;
+        font-size: 16px;
+      }
+
+      .navbar a:hover {
+        background-color: #333;
+        /* Darker grey hover effect */
+        border-radius: 5px;
+      }
+
+      h1 {
+        margin: 20px 0;
+        color: #fff;
+        font-size: 28px;
+      }
+
+      .category {
+        background: #222;
+        margin: 10px auto;
+        padding: 10px;
+        max-width: 1100px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        text-align: left;
+      }
+
+      .category h2 {
+        margin: 0;
+        padding: 10px;
+        background: #333;
+        cursor: pointer;
+        font-size: 20px;
+        border-radius: 8px;
+      }
+
+      .category h2:hover {
+        background: #444;
+      }
+
+      .games-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        display: none;
+        /* Initially hidden */
+      }
+
+      .game-box {
+        background: #2a2a2a;
+        /* Dark grey card */
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        text-align: center;
+      }
+
+      .game-box img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+      }
+
+      .game-box a {
+        display: block;
+        margin-top: 10px;
+        text-decoration: none;
+        color: #ddd;
+        /* Light grey text */
+        font-weight: bold;
+      }
+
+      .game-box a:hover {
+        color: #f39c12;
+        /* Orange accent on hover */
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="navbar">
-        <a href="#">Home</a>
+      <a href="#">Home</a>
+	  <a href="#">Downloads</a>
+	  <a href="#">Links</a>
     </div>
-
-    <h1>Wowdabug Games</h1>
-
-    <div class="games-container">
+    <h1>WDB Games</h1>
+    <div class="category">
+      <h2 onclick="toggleCategory(this)">Featured Games</h2>
+      <div class="games-container">
         <div class="game-box">
-            <img src="resources/2048.png" alt="2048">
-            <a href="8402">2048</a>
+          <img src="resources/2048.png" alt="2048">
+          <a href="8402">2048</a>
         </div>
         <div class="game-box">
-            <img src="resources/a_link_to_the_past.png" alt="A Link to the Past">
-            <a href="tsap_eht_ot_knil">A Link to the Past</a>
+          <img src="resources/bloxorz.png" alt="Bloxorz">
+          <a href="hsalf/bloxorz.html">Bloxorz</a>
         </div>
         <div class="game-box">
-            <img src="resources/asteroids.png" alt="Asteroids">
-            <a href="sdioretsa">Asteroids</a>
+          <img src="resources/tetris.png" alt="Tetris">
+          <a href="sirtet">Tetris</a>
+        </div>
+      </div>
+    </div>
+    <div class="category">
+      <h2 onclick="toggleCategory(this)">Strategy Games</h2>
+      <div class="games-container">
+        <div class="game-box">
+          <img src="resources/bitlife.png" alt="Bitlife">
+          <a href="efiltib">Bitlife</a>
         </div>
         <div class="game-box">
-            <img src="resources/babel_tower.png" alt="Babel Tower">
-            <a href="https://www.coolmathgames.com/sites/default/files/public_games/47462/">Babel Tower</a>
+          <img src="resources/bloxorz.png" alt="Bloxorz">
+          <a href="hsalf/bloxorz.html">Bloxorz</a>
         </div>
         <div class="game-box">
-            <img src="resources/basket_random.png" alt="Basket Random">
-            <a href="modnarteksab">Basket Random</a>
+          <img src="resources/globle.png" alt="Globle">
+          <a href="https://olliechick.co.nz/globle/">Globle</a>
         </div>
         <div class="game-box">
-            <img src="resources/bitlife.png" alt="Bitlife">
-            <a href="efiltib">Bitlife</a>
+          <img src="resources/minesweeper.png" alt="Minesweeper">
+          <a href="repeewsenim">Minesweeper</a>
         </div>
         <div class="game-box">
-            <img src="resources/bloxorz.png" alt="Bloxorz">
-            <a href="hsalf/bloxorz.html">Bloxorz</a>
+          <img src="resources/twhg.png" alt="TWHG">
+          <a href="hsalf/twhg.html">TWHG</a>
         </div>
         <div class="game-box">
-            <img src="resources/champion_island.png" alt="Champion Island">
-            <a href="https://html5-games.io/game/champion_island/">Champion Island</a>
+          <img src="resources/wordle.png" alt="Wordle">
+          <a href="eldrow">Wordle</a>
         </div>
         <div class="game-box">
-            <img src="resources/death_run.png" alt="Death Run">
-            <a href="nur_htaed">Death Run</a>
+          <img src="resources/worldle.png" alt="Worldle">
+          <a href="eldlrow">Worldle</a>
+        </div>
+      </div>
+    </div>
+    <div class="category">
+      <h2 onclick="toggleCategory(this)">Sports Games</h2>
+      <div class="games-container">
+        <div class="game-box">
+          <img src="resources/basket_random.png" alt="Basket Random">
+          <a href="modnarteksab">Basket Random</a>
         </div>
         <div class="game-box">
-            <img src="resources/dino.png" alt="Dino">
-            <a href="onid">Dino</a>
+          <img src="resources/pen_football.png" alt="Pen Football">
+          <a href="llabtoof_nep">Pen Football</a>
         </div>
         <div class="game-box">
-            <img src="resources/doodle_jump.png" alt="Doodle Jump">
-            <a href="pmuj_eldood">Doodle Jump</a>
+          <img src="resources/retro_bowl.png" alt="Retro Bowl">
+          <a href="lwob_orter">Retro Bowl</a>
         </div>
         <div class="game-box">
-            <img src="resources/flight_simulator.png" alt="Flight Simulator">
-            <a href="rotalumis_thgilf">Flight Simulator</a>
+          <img src="resources/soccer_random.png" alt="Soccer Random">
+          <a href="modnar_reccos">Soccer Random</a>
+        </div>
+      </div>
+    </div>
+    <div class="category">
+      <h2 onclick="toggleCategory(this)">Emulator Games</h2>
+      <div class="games-container">
+        <div class="game-box">
+          <img src="resources/a_link_to_the_past.png" alt="A Link to the Past">
+          <a href="tsap_eht_ot_knil">A Link to the Past</a>
         </div>
         <div class="game-box">
-            <img src="resources/globle.png" alt="Globle">
-            <a href="https://olliechick.co.nz/globle/">Globle</a>
+          <img src="resources/mario_64.png" alt="Mario 64">
+          <a href="46_oiram">Mario 64</a>
         </div>
         <div class="game-box">
-            <img src="resources/happy_wheels.png" alt="Happy Wheels">
-            <a href="sleehw_yppah">Happy Wheels</a>
+          <img src="resources/mario_kart_64.png" alt="Mario Kart 64">
+          <a href="46km">Mario Kart 64</a>
         </div>
         <div class="game-box">
-            <img src="resources/hexaclicker.png" alt="HexaClicker">
-            <a href="rekcilcaxeh">HexaClicker</a>
+          <img src="resources/ocarina_of_time.png" alt="Ocarina of Time">
+          <a href="emit_fo_aniraco">Ocarina of Time</a>
         </div>
         <div class="game-box">
-            <img src="resources/idle_breakout.png" alt="Idle Breakout">
-            <a href="tuokaerb_eldi">Idle Breakout</a>
+          <img src="resources/paper_mario.png" alt="Paper Mario">
+          <a href="oiram_repap">Paper Mario</a>
         </div>
         <div class="game-box">
-            <img src="resources/idle_dice.png" alt="Idle Dice">
-            <a href="ecid_eldi">Idle Dice</a>
+          <img src="resources/pokemon_emerald.png" alt="Pokemon Emerald">
+          <a href="dlareme_nomekop">Pokemon Emerald</a>
         </div>
         <div class="game-box">
-            <img src="resources/magic_cat_academy.png" alt="Magic Cat Academy">
-            <a href="https://html5-games.io/game/magic_cat/">Magic Cat Academy</a>
+          <img src="resources/punch_out.png" alt="Punch Out">
+          <a href="tuo_hcnup">Punch Out</a>
         </div>
         <div class="game-box">
-            <img src="resources/mario_64.png" alt="Mario 64">
-            <a href="46_oiram">Mario 64</a>
+          <img src="resources/super_mario_all_stars.png" alt="Super Mario All Stars">
+          <a href="srats_lla">Super Mario All Stars</a>
         </div>
         <div class="game-box">
-            <img src="resources/mario_kart_64.png" alt="Mario Kart 64">
-            <a href="46km">Mario Kart 64</a>
+          <img src="resources/super_mario_bros.png" alt="Super Mario Bros">
+          <a href="sorb_oiram_repus">Super Mario Bros</a>
         </div>
         <div class="game-box">
-            <img src="resources/minesweeper.png" alt="Minesweeper">
-            <a href="repeewsenim">Minesweeper</a>
+          <img src="resources/super_mario_world.png" alt="Super Mario World">
+          <a href="dlrow_oiram">Super Mario World</a>
         </div>
         <div class="game-box">
-            <img src="resources/ocarina_of_time.png" alt="Ocarina of Time">
-            <a href="emit_fo_aniraco">Ocarina of Time</a>
+          <img src="resources/tetris.png" alt="Tetris">
+          <a href="sirtet">Tetris</a>
         </div>
-        <div class="game-box">
-            <img src="resources/ovo.png" alt="OvO">
-            <a href="ovo">OvO</a>
-        </div>
-        <div class="game-box">
-            <img src="resources/paper_mario.png" alt="Paper Mario">
-            <a href="oiram_repap">Paper Mario</a>
-        </div>
-        <div class="game-box">
-            <img src="resources/pen_football.png" alt="Pen Football">
-            <a href="llabtoof_nep">Pen Football</a>
-        </div>
-        <div class="game-box">
-            <img src="resources/planet_clicker.png" alt="Planet Clicker">
-            <a href="rekcilc_tenalp">Planet Clicker</a>
-        </div>
-        <div class="game-box">
-            <img src="resources/polytrack.png" alt="PolyTrack">
-            <a href="2_kcartylop">PolyTrack</a>
-        </div>
-        <div class="game-box">
-            <img src="resources/pokemon_emerald.png" alt="Pokemon Emerald">
-            <a href="dlareme_nomekop">Pokemon Emerald</a>
-        </div>
-        <div class="game-box">
-            <img src="resources/punch_out.png" alt="Punch Out">
-            <a href="tuo_hcnup">Punch Out</a>
-        </div>
-        <div class="game-box">
-            <img src="resources/retro_bowl.png" alt="Retro Bowl">
-            <a href="lwob_orter">Retro Bowl</a>
-        </div>
-        <div class="game-box">
-            <img src="resources/run_3.png" alt="Run 3">
-            <a href="https://wowdabug.github.io/3_nur/tn6pS9dCf37xAhkJv/">Run 3</a>
-        </div>
-        <div class="game-box">
-            <img src="resources/slope.png" alt="Slope">
-            <a href="epols">Slope</a>
-        </div>
-        <div class="game-box">
-            <img src="resources/slowroads.png" alt="Slow Roads">
-            <a href="sr">Slow Roads</a>
-        </div>
-        <div class="game-box">
-            <img src="resources/snow_rider.png" alt="Snow Rider">
-            <a href="1v_redir_wons">Snow Rider</a>
-        </div>
-        <div class="game-box">
-            <img src="resources/soccer_random.png" alt="Soccer Random">
-            <a href="modnar_reccos">Soccer Random</a>
-        </div>
-        <div class="game-box">
-            <img src="resources/super_mario_all_stars.png" alt="Super Mario All Stars">
-            <a href="srats_lla">Super Mario All Stars</a>
-        </div>
-        <div class="game-box">
-            <img src="resources/super_mario_bros.png" alt="Super Mario Bros">
-            <a href="sorb_oiram_repus">Super Mario Bros</a>
-        </div>
-        <div class="game-box">
-            <img src="resources/super_mario_world.png" alt="Super Mario World">
-            <a href="dlrow_oiram">Super Mario World</a>
-        </div>
-        <div class="game-box">
-            <img src="resources/surf.png" alt="Surf">
-            <a href="frus">Surf</a>
-        </div>
-        <div class="game-box">
-            <img src="resources/territorial.io.png" alt="Territorial.io">
-            <a href="https://fxclient.github.io/FXclient/">Territorial.io</a>
-        </div>
-        <div class="game-box">
-            <img src="resources/tetris.png" alt="Tetris">
-            <a href="sirtet">Tetris</a>
-        </div>
-        <div class="game-box">
-            <img src="resources/the_final_earth_2.png" alt="The Final Earth 2">
-            <a href="2_htrae_lanif_eht">The Final Earth 2</a>
-        </div>
-        <div class="game-box">
-            <img src="resources/twhg.png" alt="TWHG">
-            <a href="hsalf/twhg.html">TWHG</a>
-        </div>
-        <div class="game-box">
-            <img src="resources/wordle.png" alt="Wordle">
-            <a href="eldrow">Wordle</a>
-        </div>
-        <div class="game-box">
-            <img src="resources/worldle.png" alt="Worldle">
-            <a href="eldlrow">Worldle</a>
-        </div>
+      </div>
+    </div>
+    <div class="category">
+      <h2 onclick="toggleCategory(this)">Idle Games</h2>
+      <div class="games-container">
         <div class="game-box">
             <img src="resources/cookie_clicker.png" alt="Cookie Clicker">
             <a href="rekcilc_eikooc">Cookie Clicker</a>
         </div>
         <div class="game-box">
-            <img src="resources/minecraft_classic.png" alt="Minecraft Classic">
-            <a href="cissalc_tfarcenim">Minecraft Classic</a>
+          <img src="resources/hexaclicker.png" alt="HexaClicker">
+          <a href="rekcilcaxeh">HexaClicker</a>
         </div>
         <div class="game-box">
-            <img src="resources/minecraft_indev.png" alt="Minecraft Indev">
-            <a href="vedni_tfarcenim/js">Minecraft Indev</a>
+          <img src="resources/idle_breakout.png" alt="Idle Breakout">
+          <a href="tuokaerb_eldi">Idle Breakout</a>
         </div>
         <div class="game-box">
-            <img src="resources/minecraft_alpha.png" alt="Minecraft Alpha">
-            <a href="ahpla_tfarcenim/web">Minecraft Alpha</a>
+          <img src="resources/idle_dice.png" alt="Idle Dice">
+          <a href="ecid_eldi">Idle Dice</a>
         </div>
+        <div class="game-box">
+          <img src="resources/planet_clicker.png" alt="Planet Clicker">
+          <a href="rekcilc_tenalp">Planet Clicker</a>
+        </div>
+        <div class="game-box">
+          <img src="resources/the_final_earth_2.png" alt="The Final Earth 2">
+          <a href="2_htrae_lanif_eht">The Final Earth 2</a>
+        </div>
+      </div>
     </div>
-
-</body>
+    <div class="category">
+      <h2 onclick="toggleCategory(this)">Other Games</h2>
+      <div class="games-container">
+        <div class="game-box">
+          <img src="resources/death_run.png" alt="Death Run">
+          <a href="nur_htaed">Death Run</a>
+        </div>
+        <div class="game-box">
+          <img src="resources/dino.png" alt="Dino">
+          <a href="onid">Dino</a>
+        </div>
+        <div class="game-box">
+          <img src="resources/doodle_jump.png" alt="Doodle Jump">
+          <a href="pmuj_eldood">Doodle Jump</a>
+        </div>
+        <div class="game-box">
+          <img src="resources/flight_simulator.png" alt="Flight Simulator">
+          <a href="rotalumis_thgilf">Flight Simulator</a>
+        </div>
+        <div class="game-box">
+          <img src="resources/happy_wheels.png" alt="Happy Wheels">
+          <a href="sleehw_yppah">Happy Wheels</a>
+        </div>
+        <div class="game-box">
+          <img src="resources/ovo.png" alt="OvO">
+          <a href="ovo">OvO</a>
+        </div>
+        <div class="game-box">
+          <img src="resources/polytrack.png" alt="PolyTrack">
+          <a href="2_kcartylop">PolyTrack</a>
+        </div>
+        <div class="game-box">
+          <img src="resources/slope.png" alt="Slope">
+          <a href="epols">Slope</a>
+        </div>
+        <div class="game-box">
+          <img src="resources/slowroads.png" alt="Slow Roads">
+          <a href="sr">Slow Roads</a>
+        </div>
+        <div class="game-box">
+          <img src="resources/snow_rider.png" alt="Snow Rider">
+          <a href="1v_redir_wons">Snow Rider</a>
+        </div>
+        <div class="game-box">
+          <img src="resources/surf.png" alt="Surf">
+          <a href="frus">Surf</a>
+        </div>
+      </div>
+    </div>
+    <div class="category">
+      <h2 onclick="toggleCategory(this)">Beta Games</h2>
+      <div class="games-container">
+        <div class="game-box">
+          <img src="resources/asteroids.png" alt="Asteroids">
+          <a href="sdioretsa">Asteroids</a>
+        </div>
+        <div class="game-box">
+          <img src="resources/babel_tower.png" alt="Babel Tower">
+          <a href="https://www.coolmathgames.com/sites/default/files/public_games/47462/">Babel Tower</a>
+        </div>
+        <div class="game-box">
+          <img src="resources/champion_island.png" alt="Champion Island">
+          <a href="https://html5-games.io/game/champion_island/">Champion Island</a>
+        </div>
+        <div class="game-box">
+          <img src="resources/magic_cat_academy.png" alt="Magic Cat Academy">
+          <a href="https://html5-games.io/game/magic_cat/">Magic Cat Academy</a>
+        </div>
+        <div class="game-box">
+          <img src="resources/territorial.io.png" alt="Territorial.io">
+          <a href="https://fxclient.github.io/FXclient/">Territorial.io</a>
+        </div>
+      </div>
+    </div>
+    <div class="category">
+      <h2 onclick="toggleCategory(this)">Minecraft</h2>
+      <div class="games-container">
+        <div class="game-box">
+          <img src="resources/minecraft_classic.png" alt="Minecraft Classic">
+          <a href="cissalc_tfarcenim">Minecraft Classic</a>
+        </div>
+        <div class="game-box">
+          <img src="resources/minecraft_indev.png" alt="Minecraft Indev">
+          <a href="vedni_tfarcenim/js">Minecraft Indev</a>
+        </div>
+        <div class="game-box">
+          <img src="resources/minecraft_alpha.png" alt="Minecraft Alpha">
+          <a href="ahpla_tfarcenim/web">Minecraft Alpha</a>
+        </div>
+      </div>
+    </div>
+    <script>
+      function toggleCategory(header) {
+        let gamesContainer = header.nextElementSibling;
+        if (gamesContainer.style.display === "grid") {
+          gamesContainer.style.display = "none";
+        } else {
+          gamesContainer.style.display = "grid";
+        }
+      }
+    </script>
+  </body>
 </html>
