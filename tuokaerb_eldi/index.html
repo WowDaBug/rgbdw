@@ -23,31 +23,46 @@
             color: #cccccc;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             overflow: hidden; /* Prevents scrolling */
         }
 
         canvas {
             display: block;
-            width: 100vw;
-            height: 100vh;
-            image-rendering: pixelated;
-            -webkit-interpolation-mode: nearest-neighbor;
-            -ms-touch-action: none;
+            background: black;
         }
     </style>
 </head>
 
 <body>
-    <div class="gm4html5" id="gm4html5">
-        <canvas id="canvas"></canvas>
-    </div>
+    <canvas id="canvas" width="1024" height="768"></canvas>
 
     <script type="text/javascript" src="html5game/Coding_BreakOut1.js"></script>
     <script>
         function resizeCanvas() {
             const canvas = document.getElementById("canvas");
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+            const ctx = canvas.getContext("2d");
+
+            const aspectRatio = 1024 / 768; // Change this to match your game
+            let width = window.innerWidth;
+            let height = window.innerHeight;
+
+            // Maintain aspect ratio
+            if (width / height > aspectRatio) {
+                width = height * aspectRatio;
+            } else {
+                height = width / aspectRatio;
+            }
+
+            // Resize canvas
+            canvas.style.width = `${width}px`;
+            canvas.style.height = `${height}px`;
+
+            // Clear and redraw (optional)
+            ctx.imageSmoothingEnabled = false;
         }
 
         window.addEventListener("resize", resizeCanvas);
