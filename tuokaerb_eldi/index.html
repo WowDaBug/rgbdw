@@ -42,28 +42,44 @@
 
     <script type="text/javascript" src="html5game/Coding_BreakOut1.js"></script>
     <script>
-        function resizeCanvas() {
-            const canvas = document.getElementById("canvas");
-            const ctx = canvas.getContext("2d");
+        let canvas = document.getElementById("canvas");
+        let aspectRatio = 1024 / 768; // 4:3 aspect ratio
+        let canvasWidth = 1024, canvasHeight = 768; // Original game resolution
 
-            const aspectRatio = 1024 / 768; // Change this to match your game
+        function resizeCanvas() {
             let width = window.innerWidth;
             let height = window.innerHeight;
 
-            // Maintain aspect ratio
             if (width / height > aspectRatio) {
+                height = window.innerHeight;
                 width = height * aspectRatio;
             } else {
+                width = window.innerWidth;
                 height = width / aspectRatio;
             }
 
-            // Resize canvas
-            canvas.style.width = `${width}px`;
-            canvas.style.height = `${height}px`;
-
-            // Clear and redraw (optional)
-            ctx.imageSmoothingEnabled = false;
+            canvas.style.width = width + "px";
+            canvas.style.height = height + "px";
         }
+
+        function correctMousePosition(event) {
+            const rect = canvas.getBoundingClientRect(); // Get displayed canvas size
+            const scaleX = canvasWidth / rect.width;  // Scale factor (X)
+            const scaleY = canvasHeight / rect.height; // Scale factor (Y)
+
+            const correctedX = (event.clientX - rect.left) * scaleX;
+            const correctedY = (event.clientY - rect.top) * scaleY;
+
+            return { x: correctedX, y: correctedY };
+        }
+
+        canvas.addEventListener("mousedown", function(event) {
+            const correctedPos = correctMousePosition(event);
+            console.log("Corrected Click Position:", correctedPos.x, correctedPos.y);
+
+            // Here you can trigger a function in your game, e.g.:
+            // game.handleClick(correctedPos.x, correctedPos.y);
+        });
 
         window.addEventListener("resize", resizeCanvas);
         window.onload = function () {
