@@ -43,8 +43,8 @@
     <script type="text/javascript" src="html5game/Coding_BreakOut1.js"></script>
     <script>
         let canvas = document.getElementById("canvas");
+        let context = canvas.getContext("2d");
         let aspectRatio = 1024 / 768; // 4:3 aspect ratio
-        let canvasWidth = 1024, canvasHeight = 768; // Original game resolution
 
         function resizeCanvas() {
             let width = window.innerWidth;
@@ -64,8 +64,8 @@
 
         function correctMousePosition(event) {
             const rect = canvas.getBoundingClientRect(); // Get displayed canvas size
-            const scaleX = canvasWidth / rect.width;  // Scale factor (X)
-            const scaleY = canvasHeight / rect.height; // Scale factor (Y)
+            const scaleX = canvas.width / rect.width;  // Scale factor (X)
+            const scaleY = canvas.height / rect.height; // Scale factor (Y)
 
             const correctedX = (event.clientX - rect.left) * scaleX;
             const correctedY = (event.clientY - rect.top) * scaleY;
