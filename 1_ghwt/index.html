@@ -8,84 +8,95 @@
       window.parent.maeExportApis_();
     </script>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no" />
-    <script src="/js/main.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.hotkeys.js"></script>
-    <script src="js/key_status.js"></script>
-    <script src="js/vars.js"></script>
-    <script src="js/sounds.js"></script>
-    <script src="js/colors.js"></script>
-    <script src="js/canvas.js"></script>
-    <script src="js/timer.js"></script>
-    <script src="js/border.js"></script>
-    <script src="js/mobile_controls.js"></script>
-    <script src="js/walls.js"></script>
-    <script src="js/enemy.js"></script>
-    <script src="js/checkpoint.js"></script>
-    <script src="js/coins.js"></script>
-    <script src="js/player.js"></script>
-    <script src="js/instructions.js"></script>
-    <script src="js/intermission.js"></script>
-    <script src="js/buttons.js"></script>
-    <script src="js/mouse.js"></script>
-    <script src="js/bars.js"></script>
-    <script src="js/main_menu.js"></script>
-    <script src="js/level_select.js"></script>
-    <script src="js/finish.js"></script>
-    <script src="js/ingame_menu.js"></script>
-    <script src="js/preloader.js"></script>
-    <script src="js/hotkeys.js"></script>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, minimum-scale = 1, maximum-scale = 1, user-scalable = no" />
+    <script language="javascript" src="/js/main.js" type="text/javascript"></script>
+    <script language="javascript" src="js/jquery.min.js" type="text/javascript"></script>
+    <script language="javascript" src="js/jquery.hotkeys.js" type="text/javascript"></script>
+    <script language="javascript" src="js/key_status.js" type="text/javascript"></script>
+    <script language="javascript" src="js/vars.js" type="text/javascript"></script>
+    <script language="javascript" src="js/sounds.js" type="text/javascript"></script>
+    <script language="javascript" src="js/colors.js" type="text/javascript"></script>
+    <script language="javascript" src="js/canvas.js" type="text/javascript"></script>
+    <script language="javascript" src="js/timer.js" type="text/javascript"></script>
+    <script language="javascript" src="js/border.js" type="text/javascript"></script>
+    <script language="javascript" src="js/mobile_controls.js" type="text/javascript"></script>
+    <script language="javascript" src="js/walls.js" type="text/javascript"></script>
+    <script language="javascript" src="js/enemy.js" type="text/javascript"></script>
+    <script language="javascript" src="js/checkpoint.js" type="text/javascript"></script>
+    <script language="javascript" src="js/coins.js" type="text/javascript"></script>
+    <script language="javascript" src="js/player.js" type="text/javascript"></script>
+    <script language="javascript" src="js/instructions.js" type="text/javascript"></script>
+    <script language="javascript" src="js/intermission.js" type="text/javascript"></script>
+    <script language="javascript" src="js/buttons.js" type="text/javascript"></script>
+    <script language="javascript" src="js/mouse.js" type="text/javascript"></script>
+    <script language="javascript" src="js/bars.js" type="text/javascript"></script>
+    <script language="javascript" src="js/main_menu.js" type="text/javascript"></script>
+    <script language="javascript" src="js/level_select.js" type="text/javascript"></script>
+    <script language="javascript" src="js/finish.js" type="text/javascript"></script>
+    <script language="javascript" src="js/ingame_menu.js" type="text/javascript"></script>
+    <script language="javascript" src="js/preloader.js" type="text/javascript"></script>
+    <script language="javascript" src="js/hotkeys.js" type="text/javascript"></script>
     <title>TWHG 1</title>
-    <style>
-      html, body {
-        height: 100%;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: black; /* Optional: Change as needed */
-        overflow: hidden; /* Prevents scrolling */
-      }
-
-      canvas {
-        display: block; /* Remove default inline spacing */
-      }
-    </style>
   </head>
   <body>
-    <canvas id="twhgCanvas" width="800" height="600"></canvas>
+    <div>
+      <script language="javascript" src="js/main.js" type="text/javascript"></script>
+    </div>
+    <canvas id="twhgCanvas" width="800" height="600" style="cursor: auto;"></canvas>
 
     <script>
-      function resizeCanvas() {
-        const canvas = document.getElementById("twhgCanvas");
-        const aspectRatio = 4 / 3; // 800x600 = 4:3 aspect ratio
-        let width = window.innerWidth;
-        let height = window.innerHeight;
-
-        if (width / height > aspectRatio) {
-          // Window is too wide, limit by height
-          width = height * aspectRatio;
-        } else {
-          // Window is too tall, limit by width
-          height = width / aspectRatio;
-        }
-
-        canvas.style.width = `${width}px`;
-        canvas.style.height = `${height}px`;
-      }
-
-      window.addEventListener("resize", resizeCanvas);
-      window.addEventListener("load", resizeCanvas); // Ensure it runs on page load
-
       function fnSendMsg(evt) {
         window.parent.postMessage("keypress-from-game", "*");
       }
-      document.body.addEventListener("click", fnSendMsg);
-      document.addEventListener("keypress", fnSendMsg);
-      document.addEventListener("keydown", fnSendMsg);
-      document.addEventListener("keyup", fnSendMsg);
+      document.body.addEventListener("click", function (event) {
+        fnSendMsg(event);
+      });
+      document.addEventListener("keypress", function (event) {
+        fnSendMsg(event);
+      });
+      document.addEventListener("keydown", function (e) {
+        fnSendMsg(event);
+      });
+      document.addEventListener("keyup", function (e) {
+        fnSendMsg(event);
+      });
     </script>
+	<style>
+  body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black; /* Optional background */
+    overflow: hidden;
+  }
+  canvas {
+    display: block;
+  }
+</style>
+
+<canvas id="twhgCanvas"></canvas>
+
+<script>
+  function resizeCanvas() {
+    let canvas = document.getElementById("twhgCanvas");
+    let width = window.innerWidth;
+    let height = window.innerHeight;
+
+    // Maintain 4:3 aspect ratio
+    if (width / height > 4 / 3) {
+      canvas.height = height;
+      canvas.width = (height * 4) / 3;
+    } else {
+      canvas.width = width;
+      canvas.height = (width * 3) / 4;
+    }
+  }
+
+  window.addEventListener("resize", resizeCanvas);
+  window.addEventListener("load", resizeCanvas);
+</script>
+
   </body>
 </html>
-
