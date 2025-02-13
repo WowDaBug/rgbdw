@@ -162,7 +162,7 @@ countries = [
 	[8.560000,-11.792000,"Sierra Leone","Republic of Sierra Leone"],
 	[13.736000,-88.866000,"El Salvador","Republic of El Salvador"],
 	[43.942000,12.460000,"San Marino","Most Serene Republic of San Marino"],
-	[9.774000,48.316000,"Somalia","Federal Republic of Somalia"],
+	[2.567107,45.178130,"Somalia","Federal Republic of Somalia"],
 	[9.800000,45.333300,"Somaliland","Republic of Somaliland"],
 	[44.032000,20.806000,"Serbia","Republic of Serbia"],
 	[0.201000,6.629000,"Sao Tome and Principe","Democratic Republic of São Tomé and Príncipe"],
