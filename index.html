@@ -392,6 +392,12 @@
         </div>
       </div>
     </div>
+	<h1>Page Views: <span id="counter">loading</span></h1>
+<script>
+    fetch('https://api.countapi.xyz/hit/wowdabug.github.io/rgbdw/visits')
+        .then(response => response.json())
+        .then(data => document.getElementById('counter').textContent = data.value);
+</script>
     <script>
       function toggleCategory(header) {
         let gamesContainer = header.nextElementSibling;
